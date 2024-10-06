@@ -1,0 +1,44 @@
+program BelahKetupat;
+uses crt;
+
+var
+  i, j, n, spasi: integer;
+
+begin
+  clrscr;
+  
+  write('Masukkan jumlah baris segitiga : ');
+  readln(n);
+  
+    for i := 1 to n do
+    begin
+        spasi := n - i;
+
+        for j := 1 to spasi do
+        begin
+          write(' ');
+        end;
+        for j := 1 to (2*i-1) do
+        begin
+            write('*')
+        end;
+    writeln;
+    end;
+
+    for i := (n-1) downto 1 do
+    begin
+        spasi := n - i;
+
+        for j := 1 to spasi do
+        begin
+          write(' ');
+        end;
+        for j:= (2*i-1) downto 1 do
+        begin
+            write('*')
+        end;
+    writeln;
+    end;
+
+readln;
+end.
